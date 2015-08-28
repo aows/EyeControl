@@ -78,6 +78,13 @@ public class MainActivity extends AppCompatActivity {
                 .setFacing(CameraSource.CAMERA_FACING_FRONT)
                 .setRequestedFps(30.0f)
                 .build();
+
+        try {
+            source.start();
+
+        } catch (IOException e) {
+            Log.e("TAG", "Oops", e);
+        }
     }
 
     private void requestCameraPermission() {
